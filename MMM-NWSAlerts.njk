@@ -1,0 +1,10 @@
+{% if alerts.length %}
+<div class="nws-alerts">
+  {% for alert in alerts %}
+  <div class="nws-alert-item nws-severity-{{ alert.severity | lower }}">
+    <div class="nws-alert-event">{{ alert.event }}</div>
+    <div class="nws-alert-headline">{{ alert.headline }}</div>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
